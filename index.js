@@ -17,10 +17,11 @@ corsAnywhere.createServer({
     },
 
     handleInitialRequest: (req, res, location) => {
-        console.log(`📥 Incoming request to: ${JSON.stringify(location)}`);
+        console.log(`📥 Incoming request to: ${location.href}`);
         return false; // Proceed normally
     }
 }).listen(port, host, () => {
     console.log(`🚀 CORS Proxy running on http://${host}:${port}`);
 });
+
 
